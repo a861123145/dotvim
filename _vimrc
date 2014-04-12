@@ -1,0 +1,115 @@
+"设定文件编码
+set fileencodings=utf-8,ucs-bom,gb18030,gbk,gb2312,cp936
+"配色风格
+colorscheme desert
+"设定行距 GUI 界面中生效
+set linespace=2
+"auto change dir
+set autochdir
+"设定 GUI 选项
+set guioptions=get "m:菜单 T:工具栏 r:右滚动条 L:左滚动条
+"set guioptions=grLt
+"显示标尺
+set ruler
+set cursorline
+"自动折行
+"set nowrap
+set wrap
+"按完整单词折行
+set nolinebreak
+"set linebreak
+"行宽(输入时自动插入换行符)
+set textwidth=100
+set textwidth=0
+"允许在 虚空间 内操作 (虚空间:不包含任何文本的空间。如行尾之后)
+"set virtualedit=all
+"禁止在 虚空间 内操作
+set virtualedit=
+"设定 Tab 键缩进的空格数
+set tabstop=4
+"设定编辑器将多少空格视为一个缩进
+set shiftwidth=4
+"将缩进转换为空格
+"set expandtab
+"设定自动缩进(新行与前一行缩进相同)
+set autoindent
+"set noautoindent
+"插入模式下,“←”如何删除光标前的字符:行首空白、换行符、插入点之前的字符
+set backspace=indent,eol,start
+"运行在非兼容(VI)模式下(命令模式下 TAB 补全)
+set nocompatible
+"命令行历史纪录
+set history=500
+"禁用增量搜索
+set incsearch
+"set noincsearch
+"搜索时忽略大小写
+set ignorecase
+"set noignorecase
+"高亮显示搜索结果
+set hlsearch
+"设定折叠方式
+"set foldmethod=manual
+"以下字符将被视为单词的一部分 (ASCII):
+"set iskeyword+=33-47,58-64,91-96,123-128
+set helplang=cn
+set number
+set autoindent
+set smartindent
+let Tlist_Show_One_File=1
+let Tlist_Exit_OnlyWindow=1
+"let g:winManagerWindowLayout='FileExplorer|TagList'
+let g:winManagerWindowLayout='TagList'
+nmap wm :WMToggle<cr>
+set foldmethod=syntax
+"set foldlevel=100 "启动vim时不要自动折叠代码
+let Tlist_Show_One_File=1
+let Tlist_Exit_OnlyWindow=1
+set ruler
+set showmatch
+set nobackup
+set nowritebackup
+
+set wildmode=list:full
+set wildmenu
+set cscopequickfix=s-,c-,d-,i-,t-,e-
+"nmap <C-n> :cnext<CR>
+"nmap <C-p> :cprev<CR>
+"nmap pr    :prev<CR>
+"nmap ne    :next<CR>
+nmap <Esc>s :cs find s <C-R>=expand("<cword>")<CR><CR>
+nmap <Esc>g :cs find g <C-R>=expand("<cword>")<CR><CR>
+nmap <Esc>c :cs find c <C-R>=expand("<cword>")<CR><CR>
+nmap <Esc>t :cs find t <C-R>=expand("<cword>")<CR><CR>
+nmap <Esc>e :cs find e <C-R>=expand("<cword>")<CR><CR>
+nmap <Esc>f :cs find f <C-R>=expand("<cfile>")<CR><CR>
+nmap <Esc>8 :cs find i ^<C-R>=expand("<cfile>")<CR>$<CR>
+nmap <Esc>d :cs find d <C-R>=expand("<cword>")<CR><CR>
+
+
+let g:miniBufExplMapCTabSwitchBufs = 1
+let g:miniBufExplMapWindowNavVim = 1
+let g:miniBufExplMapWindowNavArrows = 1
+
+
+nnoremap <silent> <F12> :A<CR>
+nnoremap <silent> <F3> :Grep<CR>
+
+"filetype plugin indent on
+"set completeopt=longest,menu
+
+"let g:SuperTabRetainCompletionType=2
+"let g:SuperTabDefaultCompletionType="<C-X><C-O>"
+
+if has('mouse')
+	set mouse=a
+endif
+if has("gui_running")
+"	set guioptions=
+	colorscheme desert
+	"colorscheme zellner
+	set lines=45 columns=100
+endif
+
+syntax on
+filetype plugin indent on
