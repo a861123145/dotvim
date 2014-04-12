@@ -56,15 +56,8 @@ set helplang=cn
 set number
 set autoindent
 set smartindent
-let Tlist_Show_One_File=1
-let Tlist_Exit_OnlyWindow=1
-"let g:winManagerWindowLayout='FileExplorer|TagList'
-let g:winManagerWindowLayout='TagList'
-nmap wm :WMToggle<cr>
 set foldmethod=syntax
 "set foldlevel=100 "启动vim时不要自动折叠代码
-let Tlist_Show_One_File=1
-let Tlist_Exit_OnlyWindow=1
 set ruler
 set showmatch
 set nobackup
@@ -73,27 +66,6 @@ set nowritebackup
 set wildmode=list:full
 set wildmenu
 set cscopequickfix=s-,c-,d-,i-,t-,e-
-"nmap <C-n> :cnext<CR>
-"nmap <C-p> :cprev<CR>
-"nmap pr    :prev<CR>
-"nmap ne    :next<CR>
-nmap <Esc>s :cs find s <C-R>=expand("<cword>")<CR><CR>
-nmap <Esc>g :cs find g <C-R>=expand("<cword>")<CR><CR>
-nmap <Esc>c :cs find c <C-R>=expand("<cword>")<CR><CR>
-nmap <Esc>t :cs find t <C-R>=expand("<cword>")<CR><CR>
-nmap <Esc>e :cs find e <C-R>=expand("<cword>")<CR><CR>
-nmap <Esc>f :cs find f <C-R>=expand("<cfile>")<CR><CR>
-nmap <Esc>8 :cs find i ^<C-R>=expand("<cfile>")<CR>$<CR>
-nmap <Esc>d :cs find d <C-R>=expand("<cword>")<CR><CR>
-
-
-let g:miniBufExplMapCTabSwitchBufs = 1
-let g:miniBufExplMapWindowNavVim = 1
-let g:miniBufExplMapWindowNavArrows = 1
-
-
-nnoremap <silent> <F12> :A<CR>
-nnoremap <silent> <F3> :Grep<CR>
 
 "filetype plugin indent on
 "set completeopt=longest,menu
@@ -111,5 +83,10 @@ if has("gui_running")
 	set lines=45 columns=100
 endif
 
-syntax on
+" Some Linux distributions set filetype in /etc/vimrc.
+" Clear filetype flags before changing runtimepath to force Vim to reload them.
+filetype off
+filetype plugin indent off
+set runtimepath+=$GOROOT/misc/vim
 filetype plugin indent on
+syntax on
