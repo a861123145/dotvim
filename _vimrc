@@ -91,3 +91,15 @@ set runtimepath+=$GOROOT/misc/vim
 filetype plugin indent on
 syntax on
 call pathogen#infect()
+
+
+"MiniBufExpl mapping
+map <Leader>mbe :MBEOpen<cr>
+map <Leader>mbc :MBEClose<cr>
+map <Leader>mbt :MBEToggle<cr>
+
+"navigate windows mapping
+noremap <C-J> <C-W>j
+noremap <C-K> <C-W>k
+noremap <C-H> <C-W>h
+noremap <C-L> <C-W>l
