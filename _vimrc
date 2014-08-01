@@ -104,17 +104,17 @@ noremap <C-K> <C-W>k
 noremap <C-H> <C-W>h
 noremap <C-L> <C-W>l
 
-" Taglist
-"let Tlist_Ctags_Cmd='D:\ctags58\ctags.exe'
-let Tlist_Show_One_File=1 "show current file only
-"let Tlist_Exit_OnlyWindow=1
-let Tlist_File_Fold_Auto_Close=1
-"let Tlist_Use_Right_Window=1
-let Tlist_Show_Menu=1
-"let Tlist_Auto_Open=1
-nmap <silent> tg :TlistToggle<cr>
+" " Taglist
+" "let Tlist_Ctags_Cmd='D:\ctags58\ctags.exe'
+" let Tlist_Show_One_File=1 "show current file only
+" "let Tlist_Exit_OnlyWindow=1
+" let Tlist_File_Fold_Auto_Close=1
+" "let Tlist_Use_Right_Window=1
+" let Tlist_Show_Menu=1
+" "let Tlist_Auto_Open=1
+" nmap <silent> tg :TlistToggle<cr>
 "
-" NERD-tree setting for used by winManager
+" " NERD-tree setting for used by winManager
 " let g:NERDTree_titile="[NERDTree]"
 " function! NERDTree_Start()
 " 	exe 'NERDTree'
@@ -129,3 +129,9 @@ nmap <silent> tg :TlistToggle<cr>
 " let g:winManagerWindowLayout="NERDTree|Taglist,BufExplorer"
 " let g:winManagerWidth=30
 " nmap <silent> wm :WMToggle<cr>
+"
+" replace taglist with tagbar
+" let g:tagbar_ctags_bin='/bin/ctags.exe'
+let g:tagbar_left=1
+let g:tagbar_width=30
+nmap <silent> tb :TagbarToggle<cr>
