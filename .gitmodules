@@ -13,3 +13,12 @@
 [submodule "bundle/minibufexpl"]
 	path = bundle/minibufexpl
 	url = https://github.com/fholgado/minibufexpl.vim.git
+[submodule "bundle/vim_taglist"]
+	path = bundle/vim_taglist
+	url = https://github.com/vim-scripts/taglist.vim.git
+[submodule "bundle/vim-winmanager"]
+	path = bundle/vim-winmanager
+	url = https://github.com/vim-scripts/winmanager.git
+[submodule "bundle/vim-NERD-tree"]
+	path = bundle/vim-NERD-tree
+	url = https://github.com/vim-scripts/The-NERD-tree.git
