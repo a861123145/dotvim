@@ -89,6 +89,8 @@ filetype off
 filetype plugin indent off
 set runtimepath+=$GOROOT/misc/vim
 filetype plugin indent on
+autocmd FileType python setlocal et sta sw=4 sts=4
+autocmd FileType python setlocal foldmethod=indent
 syntax on
 call pathogen#infect()
 
@@ -114,7 +116,7 @@ noremap <C-L> <C-W>l
 " "let Tlist_Auto_Open=1
 " nmap <silent> tg :TlistToggle<cr>
 "
-" " NERD-tree setting for used by winManager
+" " NERD-tree settibg for used by winManager
 " let g:NERDTree_titile="[NERDTree]"
 " function! NERDTree_Start()
 " 	exe 'NERDTree'
@@ -135,3 +137,21 @@ noremap <C-L> <C-W>l
 let g:tagbar_left=1
 let g:tagbar_width=30
 nmap <silent> tb :TagbarToggle<cr>
+
+" pydiction
+" use <TAB> to autocomplete when type something
+let g:pydiction_location = '~/.vim/bundle/python-pydiction/complete-dict'
+let g:pydiction_menu_height = 3
+au FileType python set omnifunc=pythoncomplete#Complete
+
+" python auto-complete code
+" Typing the following (in insert mode):
+"   os.lis<Ctrl-n>
+" will expand to:
+"   os.listdir(
+" Python 自动补全功能，只需要反覆按 <C-x><C-O> 就行了
+"
+" make parameter for python
+autocmd FileType python setlocal makeprg=python\ %
+autocmd BufNewFile,BufRead test*.py setlocal makeprg=python\ %
+nmap <F5> :make<cr>

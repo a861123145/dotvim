@@ -25,3 +25,9 @@
 [submodule "bundle/vim-tagbar"]
 	path = bundle/vim-tagbar
 	url = git://github.com/majutsushi/tagbar
+[submodule "bundle/python-pydiction"]
+	path = bundle/python-pydiction
+	url = https://github.com/rkulla/pydiction.git
+[submodule "bundle/snipmate"]
+	path = bundle/snipmate
+	url = https://github.com/msanders/snipmate.vim.git
