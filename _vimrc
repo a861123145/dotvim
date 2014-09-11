@@ -155,3 +155,11 @@ au FileType python set omnifunc=pythoncomplete#Complete
 autocmd FileType python setlocal makeprg=python\ %
 autocmd BufNewFile,BufRead test*.py setlocal makeprg=python\ %
 nmap <F5> :make<cr>
+nmap json :%!python -m json.tool<cr>
+
+"对搜索的设置
+map ft :call Search_Word()<CR>:copen<CR>
+function Search_Word()
+	let w = expand("<cword>") " 在当前光标位置抓词
+	execute "vimgrep " w " **"
+endfunction
