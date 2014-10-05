@@ -81,16 +81,12 @@ if has("gui_running")
 	colorscheme desert
 	"colorscheme zellner
 	set lines=45 columns=100
+	" set font
 	if has("gui_gtk2")
-
 		set guifont=DejaVu\ Sans\ Mono\ 10
-
 	elseif has("gui_macvim")
-
 		set guifont=DejaVu_Sans_Mono:h11
-
 	elseif has("gui_win32")
-
 		set guifont=DejaVu_Sans_Mono:h11
 	end
 endif
