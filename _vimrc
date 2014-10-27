@@ -155,7 +155,7 @@ au FileType python set omnifunc=pythoncomplete#Complete
 autocmd FileType python setlocal makeprg=python\ %
 autocmd BufNewFile,BufRead test*.py setlocal makeprg=python\ %
 nmap <F5> :make<cr>
-nmap json :%!python -m json.tool<cr>
+"nmap json :%!python -m json.tool<cr>  "cause move instruction J slow
 
 "对搜索的设置
 map ft :call Search_Word()<CR>:copen<CR>
