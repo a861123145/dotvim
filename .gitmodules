@@ -31,3 +31,6 @@
 [submodule "bundle/snipmate"]
 	path = bundle/snipmate
 	url = https://github.com/msanders/snipmate.vim.git
+[submodule "bundle/vim-emmet"]
+	path = bundle/vim-emmet
+	url = https://github.com/mattn/emmet-vim.git

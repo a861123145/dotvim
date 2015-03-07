@@ -171,3 +171,6 @@ function Search_Word()
 	let w = expand("<cword>") " 在当前光标位置抓词
 	execute "vimgrep " w " **"
 endfunction
+
+let g:user_emmet_install_global = 0
+autocmd FileType html,css EmmetInstall
