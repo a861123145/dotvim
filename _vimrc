@@ -11,7 +11,7 @@ set guioptions=get "m:菜单 T:工具栏 r:右滚动条 L:左滚动条
 "set guioptions=grLt
 "显示标尺
 set ruler
-set cursorline
+"set cursorline
 "自动折行
 "set nowrap
 set wrap
@@ -174,3 +174,8 @@ endfunction
 
 let g:user_emmet_install_global = 0
 autocmd FileType html,css EmmetInstall
+
+au VimEnter * RainbowParenthesesToggle
+au Syntax * RainbowParenthesesLoadRound
+au Syntax * RainbowParenthesesLoadSquare
+au Syntax * RainbowParenthesesLoadBraces
