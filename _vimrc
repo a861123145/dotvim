@@ -6,6 +6,7 @@ colorscheme desert
 set linespace=2
 "auto change dir
 set autochdir
+set showtabline=0
 "设定 GUI 选项
 set guioptions=get "m:菜单 T:工具栏 r:右滚动条 L:左滚动条
 "set guioptions=grLt
@@ -38,6 +39,7 @@ set autoindent
 set backspace=indent,eol,start
 "运行在非兼容(VI)模式下(命令模式下 TAB 补全)
 set nocompatible
+set hidden "Ctrl Space
 "命令行历史纪录
 set history=500
 "禁用增量搜索
@@ -179,3 +181,11 @@ au VimEnter * RainbowParenthesesToggle
 au Syntax * RainbowParenthesesLoadRound
 au Syntax * RainbowParenthesesLoadSquare
 au Syntax * RainbowParenthesesLoadBraces
+
+" CtrlSpace setting
+if has("gui_running")
+	let g:CtrlSpaceSymbols = { "File": "◯", "CTab": "▣", "Tabs": "▢", "NTM": " ⁺" }
+endif
+if executable("ag")
+	let g:CtrlSpaceGlobCommand = 'ag -l --nocolor -g ""'
+endif
